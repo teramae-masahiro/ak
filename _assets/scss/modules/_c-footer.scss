@@ -1,0 +1,13 @@
+@use '../mixin/mixin' as *;
+
+/* --------------------------------
+c-footer
+----------------------------------- */
+.c-footer {
+  height: 500px;
+  background-color:#0D3745;
+  color: #fff;
+  a {
+    color: inherit;
+  }
+}
