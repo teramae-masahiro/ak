@@ -62,7 +62,10 @@ include($_SERVER['DOCUMENT_ROOT'] . '/inc/header.php'); ?>
             </div>
           </div>
           <div class="p-service__logo">
-            <img src="./img/svg/logo-g.svg" alt="Attakan" class="p-service__logo-img">
+            <picture>
+              <source media="(max-width: 820px)" srcset="./img/svg/logo-b.svg">
+              <img src="./img/svg/logo-g.svg" alt="Attakan" class="p-service__logo-img">
+            </picture>
           </div>
         </div>
       </div>
@@ -129,6 +132,9 @@ include($_SERVER['DOCUMENT_ROOT'] . '/inc/header.php'); ?>
             </a>
           </li>
         </ul>
+        <div class="p-topics__btn-wrapper--sp">
+          <a href="/" class="c-link__btn">一覧を見る</a>
+        </div>
       </div>
     </div>
   </section>

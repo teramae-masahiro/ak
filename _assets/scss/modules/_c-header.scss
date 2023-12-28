@@ -6,14 +6,12 @@
 -----------------------------------*/
 
 #loading {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1000;
 }
-
-
 
 /* --------------------------------
 c-header
@@ -27,9 +25,15 @@ c-header
     align-items: center;
     justify-content: space-between;
     margin-top: 20px;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
   }
   &__logo {
     padding-left: vw(50px);
+    @include sp {
+      width: 150px;
+    }
   }
 }
 .p-nav {
@@ -148,10 +152,10 @@ c-header
   font-size: 14px;
   font-weight: $bold;
   @include sp {
-    display: none;
+    // display: none;
   }
   &__icon {
-    height: 150px;
+    height: 300px;
     width: 1px;
     background: #fff;
     z-index: 100;

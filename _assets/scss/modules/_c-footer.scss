@@ -16,6 +16,14 @@ c-footer
     max-width: 1200px;
     margin: 0 auto;
     padding: 60px 20px 80px;
+    @include sp {
+      padding: 60px 20px 60px;
+    }
+  }
+  &__logo  {
+    @include sp {
+      width: 270px;
+    }
   }
   &__title {
     font-size: 17px;
@@ -47,9 +55,15 @@ c-footer
   }
   &__list {
     flex: 1 1 28%;
+    @include sp {
+      display: none;
+    }
   }
   &__list--r {
     flex: 1 1 32%;
+    @include sp {
+      display: none;
+    }
   }
   &__link-title {
     border-bottom: 2px solid #fff;
@@ -62,4 +76,7 @@ c-footer
     text-align: center;
     padding-bottom: 26px;
   }
+}
+.my-rect {
+  fill: red;
 }

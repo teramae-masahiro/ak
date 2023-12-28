@@ -25,9 +25,21 @@ document.addEventListener("DOMContentLoaded", () => {
     opacity: 1,
     y: 0,
     ease: "power2.out",
-  }).to(loading, {
-    opacity: 0,
-    duration: 1,
-    ease: "power2.in",
   });
 });
+
+
+
+
+  document.addEventListener('scroll', function() {
+    var scrollPosition = window.pageYOffset;
+    var maxScroll = document.body.scrollHeight - window.innerHeight;
+    var scrollPercentage = scrollPosition / maxScroll;
+
+    // SVG内の全ての要素の色を変更
+    var svgElements = document.querySelectorAll('svg *');
+    svgElements.forEach(function(element) {
+      element.style.fill = `rgba(${Math.floor(255 * scrollPercentage)}, ${Math.floor(255 * (1 - scrollPercentage))}, 0)`;
+    });
+  });
+

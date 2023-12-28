@@ -27,6 +27,9 @@ body {
   font-weight: $bold;
   text-align: center;
   line-height: 1;
+  @include sp {
+    font-size: 24px;
+  }
 }
 .c-lead__title--en {
   font-family: $fontE;
@@ -44,6 +47,9 @@ body {
   font-weight: $bold;
   line-height: 1;
   color: #fff;
+  @include sp {
+    font-size: 60px;
+  }
 }
 .c-primary__sub-title {
   font-size: 20px;
@@ -52,6 +58,10 @@ body {
   padding-left: 100px;
   position: relative;
   margin-top: 20px;
+  @include sp {
+    font-size: 17px;
+    padding-left: 50px;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -62,6 +72,9 @@ body {
     height: 1px;
     background: #fff;
     transform: translateY(-50%);
+    @include sp {
+      width: 40px;
+    }
   }
 }
 .c-primary__title--black {
@@ -84,7 +97,7 @@ body {
   padding-bottom: 44px;
   @include sp {
     font-size: 24px;
-    padding-bottom: 23px;
+    padding-bottom: 0px;
   }
 }
 .p-service__title--jp {
@@ -92,7 +105,7 @@ body {
   font-weight: $bold;
   line-height: 1.5;
   @include sp {
-    font-size: 24px;
+    font-size: 23px;
   }
 }
 .p-service__title--sub {
@@ -189,6 +202,7 @@ body {
     height: 100vh;
     @include sp {
       padding: 350px 20px 60px;
+      height: 100%;
     }
   }
 }
@@ -210,6 +224,8 @@ body {
     gap: vw(86px);
     @include sp {
       padding: 50px 20px 100px;
+      flex-direction: column;
+      align-items: flex-start;
     }
   }
   &__title {
@@ -221,27 +237,39 @@ body {
   &__bottom-text {
     margin-bottom: 30px;
     @include sp {
-      padding-bottom: 20px;
+      margin-bottom: 20px;
     }
   }
   &__container {
     margin-top: -100px;
+    @include sp {
+      margin-top: -50px;
+    }
   }
   &__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-image: url(../../img/common/common-bg.jpg);
-    background-repeat: no-repeat;
     width: vw(1720px);
     height: 100%;
     padding: 110px vw(180px);
     gap: vw(80px);
+    @include sp {
+      width: 94.66%;
+      flex-direction: column-reverse;
+      padding: 50px 20px;
+      gap: 0px;
+      background-image: url(../../img/common/common-bg--sp.png);
+    }
   }
   &__content--top {
     margin-left: auto;
     margin-bottom: 80px;
     border-radius: 20px 0 0 20px;
+    @include sp {
+      margin-bottom: 60px;
+    }
   }
   &__content--bottom {
     margin-right: auto;
@@ -251,6 +279,7 @@ body {
   &__left-wrapper {
     flex: 1 1 50%;
     @include sp {
+      padding: 0 20px;
     }
   }
   &__right-wrapper {
@@ -261,6 +290,11 @@ body {
   &__logo {
     text-align: center;
     padding-bottom: 150px;
+    width: 350px;
+    margin: 0 auto;
+    @include sp {
+      width: 240px;
+    }
   }
 }
 .p-topics {
@@ -269,12 +303,31 @@ body {
     padding: 120px 20px;
     margin: 0 auto;
     max-width: 1240px;
+    @include sp {
+      padding: 50px 54px;
+    }
   }
   &__title-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     padding-bottom: 40px;
+    @include sp {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  &__btn-wrapper {
+    @include sp {
+      display: none;
+    }
+  }
+  &__btn-wrapper--sp {
+    display: none;
+    @include sp {
+      display: block;
+      text-align: center;
+    }
   }
   &__content-text {
     margin: 10px 0;
@@ -287,12 +340,22 @@ body {
   &__list {
     display: flex;
     flex-wrap: wrap;
+    @include sp {
+      flex-direction: column;
+    }
   }
   &__item {
     flex: 1 1 calc(25% - 20px);
+    @include sp {
+      flex: 1 1 100%;
+      margin-bottom: 20px;
+    }
   }
   &__item + &__item {
     margin-left: 20px;
+    @include sp {
+      margin-left: 0px;
+    }
   }
 }
 .p-sns {
@@ -300,15 +363,31 @@ body {
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
+  @include sp {
+    background-position: middle bottom;
+  }
   &__wrapper {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 300px 20px 235px;
+    padding: 300px 20px 210px;
+    @include sp {
+      padding: 100px 20px;
+    }
+  }
+  &__title-wrapper {
+    @include sp {
+      text-align: left;
+      padding-bottom: 30px;
+    }
   }
   &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include sp {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
   &__follow {
     padding-right: vw(100px);
@@ -326,6 +405,10 @@ body {
   &__follow-img {
     width: 70px;
     height: 70px;
+    @include sp {
+      width: 50px;
+      height: 50px;
+    }
   }
 }
 
@@ -333,6 +416,9 @@ body {
   &__wrapper {
     display: flex;
     color: $cBlack;
+    @include sp {
+      flex-direction: column;
+    }
   }
   &__left {
     background-image: url(../../img/common/company-bg.jpg);
@@ -384,6 +470,10 @@ body {
     position: absolute;
     background: rgba(255, 255, 255, 0.6);
     transition: all 0.3s ease-in-out;
+    @include sp {
+      left: 20px;
+      right: 20px;
+    }
   }
   &__right:hover::before,
   &__left:hover::before {
@@ -398,6 +488,9 @@ body {
     position: relative;
     z-index: 1;
     padding: 70px 0px;
+    @include sp {
+      padding: 40px 5px;
+    }
   }
   &__title {
     font-size: 36px;
@@ -431,7 +524,9 @@ body {
       left: 0;
       z-index: 0;
     }
-
+    @include sp {
+      padding: 80px 25px 0;
+    }
   }
   &__container {
     position: relative;
@@ -443,15 +538,26 @@ body {
     max-width: 1360px;
     margin: 0px auto 0;
     border-radius: 40px;
+    @include sp {
+      flex-direction: column;
+      padding: 50px 30px;
+
+    }
   }
   &__title-wrapper {
     flex: 1 1 50%;
   }
   &__text-wrapper {
     flex: 1 1 50%;
+    @include sp {
+      margin-top: 30px;
+    }
   }
   &__btn-wrapper {
     margin-top: 30px;
   }
-
 }
+
+
+
+
