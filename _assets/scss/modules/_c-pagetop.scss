@@ -3,12 +3,3 @@
 /* --------------------------------
 c-pagetop
 ----------------------------------- */
-.c-pagetop {
-  right: 30px;
-  a {
-    display: block;
-  }
-  @include sp {
-    right: 10px;
-  }
-}

@@ -58,3 +58,16 @@
   $rate: math.div(100, $viewport);
   @return $rate * $size * 1vw;
 }
+
+
+@function vw($size, $viewport: s.$vw_standard_width) {
+  $rate: math.div(100, $viewport);
+  @return $rate * $size * 1vw;
+}
+@function vh($size, $viewport: s.$vh_standard_height) {
+  $rate: math.div(100, $viewport);
+  @return $rate * $size * 1vh;
+}
+@function halfPixel($size) {
+  @return $size * 0.5 * 1px;
+}

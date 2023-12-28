@@ -1,5 +1,4 @@
 <?php
-$pageId = 'news';
 include($_SERVER['DOCUMENT_ROOT'] . '/inc/header.php'); ?>
 
 

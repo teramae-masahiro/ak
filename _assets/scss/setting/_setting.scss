@@ -4,16 +4,29 @@
 $placeholderColor: #c3c3c3;
 
 // メディアクエリの基準幅
-$bp-sp: 640px;
-$bp-pc: 641px;
+$bp-sp: 820px;
+$bp-pc: 821px;
 
 // vwの基準となる幅 →320px=スマホ最小
-$vw_standard_width: 375;
+$vw_standard_width: 1900px;
 
 // transition
 $transition01: 0.3s ease-in-out;
 
 // color
-$or: #ff6c08;
-$bl: #0042a8;
-$bl02:#00217c;
+$cBlack: #1D1D1D;
+$blue: #00C2E8;
+$dBlue: #15317A;
+$offWhite: #F9F7F3;
+$gray: #EDEBEB;
+$red: #E1344C;
+
+
+//fonts
+$fontJ: 'Noto Sans JP', sans-serif;
+$fontE: 'Dancing Script', cursive;
+
+// font-weight
+$medium: 500;
+$bold: 700;
+$black: 900;

@@ -1,6 +1,457 @@
-@use '../../mixin/mixin' as *;
-@use '../../setting/setting' as *;
+@use "../../mixin/mixin" as *;
+@use "../../setting/setting" as *;
 
-.p-home {
-  height: 1200px;
+/*----------------------------------
+  common
+-----------------------------------*/
+//fonts
+body {
+  font-family: $fontJ;
+  font-weight: $medium;
+  font-size: 15px;
+  line-height: 2;
+  word-break: break-all;
+  color: #fff;
+  @include sp {
+    font-size: 13px;
+  }
+}
+.c-lead__text {
+  font-size: 18px;
+  @include sp {
+    font-size: 15px;
+  }
+}
+.c-lead__title {
+  font-size: 60px;
+  font-weight: $bold;
+  text-align: center;
+  line-height: 1;
+}
+.c-lead__title--en {
+  font-family: $fontE;
+  line-height: 2;
+}
+.c-lead__title--jp {
+  font-family: $fontJ;
+  letter-spacing: 0.05em;
+  padding-bottom: 55px;
+  line-height: 1.5;
+}
+.c-primary__title {
+  font-size: 120px;
+  font-family: $fontE;
+  font-weight: $bold;
+  line-height: 1;
+  color: #fff;
+}
+.c-primary__sub-title {
+  font-size: 20px;
+  font-weight: $bold;
+  display: block;
+  padding-left: 100px;
+  position: relative;
+  margin-top: 20px;
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 0px;
+    width: 80px;
+    height: 1px;
+    background: #fff;
+    transform: translateY(-50%);
+  }
+}
+.c-primary__title--black {
+  color: $cBlack;
+}
+.c-primary__sub-title--black::before {
+  background: $cBlack;
+}
+
+.c-nav__text {
+  font-weight: $bold;
+  @include sp {
+    font-weight: $medium;
+  }
+}
+.p-service__title--en {
+  font-size: 24px;
+  font-weight: $bold;
+  font-family: $fontE;
+  padding-bottom: 44px;
+  @include sp {
+    font-size: 24px;
+    padding-bottom: 23px;
+  }
+}
+.p-service__title--jp {
+  font-size: 32px;
+  font-weight: $bold;
+  line-height: 1.5;
+  @include sp {
+    font-size: 24px;
+  }
+}
+.p-service__title--sub {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.5;
+  padding-bottom: 40px;
+  @include sp {
+    font-size: 15px;
+    padding-bottom: 20px;
+  }
+}
+.c-link__btn {
+  width: 280px;
+  line-height: 60px;
+  border-radius: 30px;
+  background: $blue;
+  color: $cBlack;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  z-index: 0;
+  &:hover {
+    opacity: 1;
+    color: #fff;
+    z-index: 1;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    background: $cBlack;
+    transition: width 0.3s ease, height 0.3s ease, left 0.3s ease, top 0.3s ease, border-radius 0.3s ease;
+  }
+  &:hover::before {
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    border-radius: 28px;
+    z-index: -1;
+  }
+  & + .c-link__btn {
+    margin-top: 20px;
+    display: block;
+  }
+}
+.c-category {
+  display: inline-block;
+  background: $dBlue;
+  border-radius: 24px;
+  line-height: 24px;
+  padding: 0px 10px;
+  color: #fff;
+  font-size: 12px;
+}
+
+/*----------------------------------
+  global
+-----------------------------------*/
+.global-wrapper {
+  position: relative;
+  &::after {
+    content: "";
+    background-image: url(../../img/common/top-bg.png);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+/*----------------------------------
+  front-page
+-----------------------------------*/
+.p-gradation__wrapper {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0.5) 60%);
+  height: 100%;
+}
+
+.p-fv {
+  &__wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 360px 20px 150px;
+    height: 100vh;
+    @include sp {
+      padding: 350px 20px 60px;
+    }
+  }
+}
+.p-service {
+  &__wrapper {
+  }
+  &__lead {
+    background-image: url(../../img/common/service-bg.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+  &__lead-inner {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 146px 20px 196px;
+    display: flex;
+    align-items: center;
+    gap: vw(86px);
+    @include sp {
+      padding: 50px 20px 100px;
+    }
+  }
+  &__title {
+    flex: 1 0 50%;
+  }
+  &__text {
+    flex: 1 1 50%;
+  }
+  &__bottom-text {
+    margin-bottom: 30px;
+    @include sp {
+      padding-bottom: 20px;
+    }
+  }
+  &__container {
+    margin-top: -100px;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(../../img/common/common-bg.jpg);
+    background-repeat: no-repeat;
+    width: vw(1720px);
+    height: 100%;
+    padding: 110px vw(180px);
+    gap: vw(80px);
+  }
+  &__content--top {
+    margin-left: auto;
+    margin-bottom: 80px;
+    border-radius: 20px 0 0 20px;
+  }
+  &__content--bottom {
+    margin-right: auto;
+    border-radius: 0 20px 20px 0;
+    margin-bottom: 150px;
+  }
+  &__left-wrapper {
+    flex: 1 1 50%;
+    @include sp {
+    }
+  }
+  &__right-wrapper {
+    flex: 1 1 50%;
+    @include sp {
+    }
+  }
+  &__logo {
+    text-align: center;
+    padding-bottom: 150px;
+  }
+}
+.p-topics {
+  background: $offWhite;
+  &__wrapper {
+    padding: 120px 20px;
+    margin: 0 auto;
+    max-width: 1240px;
+  }
+  &__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 40px;
+  }
+  &__content-text {
+    margin: 10px 0;
+  }
+  &__date {
+    color: #707070;
+    font-size: 13px;
+    margin-right: 5px;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    flex: 1 1 calc(25% - 20px);
+  }
+  &__item + &__item {
+    margin-left: 20px;
+  }
+}
+.p-sns {
+  background-image: url(../../img/common/sns-bg.jpg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  &__wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 300px 20px 235px;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__follow {
+    padding-right: vw(100px);
+  }
+  &__follow-wrapper {
+    text-align: center;
+    margin: 0 auto;
+  }
+  &__link {
+    display: inline-block;
+  }
+  &__link + &__link {
+    margin-left: 40px;
+  }
+  &__follow-img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+.p-cta {
+  &__wrapper {
+    display: flex;
+    color: $cBlack;
+  }
+  &__left {
+    background-image: url(../../img/common/company-bg.jpg);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+  }
+  &__right {
+    background-image: url(../../img/common/recruit-bg.jpg);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+  }
+  &__right:hover,
+  &__left:hover {
+    .c-link__btn {
+      opacity: 1;
+      color: #fff;
+      z-index: 1;
+
+      &::before {
+        width: 100%;
+        height: 100%;
+        left: 0px;
+        border-radius: 28px;
+        z-index: -1;
+      }
+    }
+  }
+  &__right::before,
+  &__left::before {
+    content: "";
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.6);
+    transition: all 0.3s ease-in-out;
+  }
+  &__right:hover::before,
+  &__left:hover::before {
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  &__right-wrapper,
+  &__left-wrapper {
+    position: relative;
+    z-index: 1;
+    padding: 70px 0px;
+  }
+  &__title {
+    font-size: 36px;
+    font-weight: $bold;
+    line-height: 1;
+  }
+  &__sub-title {
+    font-size: 18px;
+    font-family: $fontE;
+    font-weight: $bold;
+    margin-top: 0px;
+    display: inline-block;
+  }
+  &__btn-wrapper {
+    margin-top: 30px;
+  }
+}
+
+.p-contact-cta {
+  &__wrapper {
+    padding-top: 200px;
+    position: relative;
+    &::before {
+      content: "";
+      background-image: url(../../img/common/footer-bg.png);
+      background-position: top;
+      width: 100%;
+      height: 35%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+  }
+  &__container {
+    position: relative;
+    background: $dBlue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 120px;
+    max-width: 1360px;
+    margin: 0px auto 0;
+    border-radius: 40px;
+  }
+  &__title-wrapper {
+    flex: 1 1 50%;
+  }
+  &__text-wrapper {
+    flex: 1 1 50%;
+  }
+  &__btn-wrapper {
+    margin-top: 30px;
+  }
+
 }
