@@ -1,9 +1,9 @@
-@use '../mixin/mixin' as *;
-@use '../setting/setting' as *;
+@use "../mixin/mixin" as *;
+@use "../setting/setting" as *;
 /*------------------------------------------------------------------------------
   reset PC
 ------------------------------------------------------------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Noto+Sans+JP:wght@500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Noto+Sans+JP:wght@500;700;900&display=swap");
 
 body {
   margin: 0;
@@ -19,7 +19,6 @@ img {
   border: 0;
   margin: 0;
   width: 100%;
-  // max-width: 100%;
 }
 
 p {
@@ -35,9 +34,12 @@ a {
   transition: $transition01;
   @include pc {
     &:hover {
-      opacity: .8;
+      opacity: 0.8;
     }
   }
+}
+svg path {
+  transition: fill 0.5s ease;
 }
 
 input,
@@ -99,7 +101,9 @@ main {
   display: block;
 }
 
-dl,dt,dd {
+dl,
+dt,
+dd {
   padding: 0;
   margin: 0;
 }
@@ -120,8 +124,6 @@ dl,dt,dd {
     transition: $transition01;
   }
 }
-
-
 
 /*------------------------------------------------------------------------------
   reset SP

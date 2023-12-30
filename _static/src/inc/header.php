@@ -21,8 +21,7 @@
       <div class="p-header__wrapper">
         <h1 class="p-header__logo">
           <a href="/" class="p-header__home-link">
-            <!-- <img src="./img/svg/common-logo.svg" alt="Attakan" class=""> -->
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="270" height="70.018" viewBox="0 0 270 70.018">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 270 70.018">
               <defs>
                 <clipPath id="clip-path">
                   <rect id="Rectangle_25435" data-name="Rectangle 25435" width="77.559" height="70.018" fill="#fff" />
@@ -68,10 +67,25 @@
               <li class="p-nav__item  c-nav__text p-nav__sns">
                 <ul class="p-nav__list--secondary">
                   <li class="p-nav__item--secondary">
-                    <a href="/privacy/" class="p-nav__link--secondary"><img src="./img/svg/x.svg" alt="X" class="p-sns__img"></a>
+                    <a href="/privacy/" class="p-nav__link--secondary"><svg xmlns="http://www.w3.org/2000/svg" width="27.398" height="28" viewBox="0 0 27.398 28">
+                        <path id="Path_33354" data-name="Path 33354" d="M12.995,15.7h0l-1.084-1.55L3.288,1.82H7l6.959,9.954,1.084,1.55,9.046,12.939H20.377ZM24.088,0,15.232,10.294,8.158,0H0L10.7,15.567,0,28H2.417l9.352-10.871L19.24,28H27.4L16.3,11.856h0L26.5,0Z" fill="#fff" />
+                      </svg></a>
                   </li>
                   <li class="p-nav__item--secondary">
-                    <a href="/sitemap/" class="p-nav__link--secondary"><img src="./img/svg/insta.svg" alt="instagram" class="p-sns__img"></a>
+                    <a href="/sitemap/" class="p-nav__link--secondary"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
+                        <defs>
+                          <clipPath id="clip-path">
+                            <rect id="Rectangle_25182" data-name="Rectangle 25182" width="28" height="28" fill="#fff" />
+                          </clipPath>
+                        </defs>
+                        <g id="Group_21422" data-name="Group 21422" clip-path="url(#clip-path)">
+                          <g id="Group_30843" data-name="Group 30843">
+                            <path id="Path_33351" data-name="Path 33351" d="M14,2.523c3.738,0,4.181.014,5.657.082a7.745,7.745,0,0,1,2.6.482,4.338,4.338,0,0,1,1.61,1.047,4.338,4.338,0,0,1,1.047,1.61,7.746,7.746,0,0,1,.482,2.6c.067,1.476.082,1.919.082,5.657s-.014,4.181-.082,5.657a7.746,7.746,0,0,1-.482,2.6,4.636,4.636,0,0,1-2.657,2.657,7.746,7.746,0,0,1-2.6.482c-1.476.067-1.919.082-5.657.082s-4.181-.014-5.657-.082a7.746,7.746,0,0,1-2.6-.482,4.339,4.339,0,0,1-1.61-1.047,4.338,4.338,0,0,1-1.047-1.61,7.748,7.748,0,0,1-.482-2.6c-.067-1.476-.082-1.919-.082-5.657s.014-4.181.082-5.657a7.748,7.748,0,0,1,.482-2.6,4.338,4.338,0,0,1,1.047-1.61,4.339,4.339,0,0,1,1.61-1.047,7.746,7.746,0,0,1,2.6-.482c1.476-.067,1.919-.082,5.657-.082M14,0C10.2,0,9.72.016,8.227.084a10.277,10.277,0,0,0-3.4.651A6.863,6.863,0,0,0,2.349,2.35,6.863,6.863,0,0,0,.734,4.829a10.276,10.276,0,0,0-.651,3.4C.015,9.721,0,10.2,0,14s.016,4.279.084,5.772a10.276,10.276,0,0,0,.651,3.4,6.863,6.863,0,0,0,1.615,2.48,6.863,6.863,0,0,0,2.48,1.615,10.277,10.277,0,0,0,3.4.651C9.72,27.984,10.2,28,14,28s4.279-.016,5.772-.084a10.277,10.277,0,0,0,3.4-.651,7.159,7.159,0,0,0,4.094-4.095,10.276,10.276,0,0,0,.651-3.4C27.983,18.279,28,17.8,28,14s-.016-4.279-.084-5.772a10.276,10.276,0,0,0-.651-3.4,6.864,6.864,0,0,0-1.615-2.48A6.863,6.863,0,0,0,23.17.735a10.277,10.277,0,0,0-3.4-.651C18.278.016,17.8,0,14,0" fill="#fff" />
+                            <path id="Path_33352" data-name="Path 33352" d="M129.744,122.556a7.189,7.189,0,1,0,7.189,7.189,7.189,7.189,0,0,0-7.189-7.189m0,11.856a4.667,4.667,0,1,1,4.667-4.667,4.667,4.667,0,0,1-4.667,4.667" transform="translate(-115.744 -115.746)" fill="#fff" />
+                            <path id="Path_33353" data-name="Path 33353" d="M359.526,88.895a1.68,1.68,0,1,1-1.68-1.68,1.68,1.68,0,0,1,1.68,1.68" transform="translate(-336.373 -82.369)" fill="#fff" />
+                          </g>
+                        </g>
+                      </svg></a>
                   </li>
                   <li class="p-nav__item--secondary">
                     <div class="p-header__hamburger">
@@ -83,14 +97,22 @@
                 </ul>
               </li>
             </ul>
-            <ul class="p-nav__sp-list">
-              <li class="p-nav__sp-item"><a href="/" class="p-nav__sp-link">HOME</a></li>
-              <li class="p-nav__sp-item"><a href="/about/" class="p-nav__sp-link">グループハウス美々</a></li>
-              <li class="p-nav__sp-item"><a href="/massage/" class="p-nav__sp-link">マッサージ事業</a></li>
-              <li class="p-nav__sp-item"><a href="/recruit/" class="p-nav__sp-link">採用情報</a></li>
-              <li class="p-nav__sp-item"><a href="/company/" class="p-nav__sp-link">会社案内</a></li>
-              <li class="p-nav__sp-item"><a href="/contact/" class="p-nav__sp-link">お問い合わせ</a></li>
-            </ul>
+            <div class="p-nav__sp-list">
+              <a href="/" class="p-nav__sp-link">HOME</a>
+              <p class="p-nav__sp-nav-title">グループハウス美々</p>
+              <ul class="p-nav__sp-sub-list">
+              <li class="p-nav__sp-item"><a href="/" class="p-nav__sp-link">サービス案内</a></li>
+                <li class="p-nav__sp-item"><a href="/" class="p-nav__sp-link">サービス案内</a></li>
+              </ul>
+              <p class="p-nav__sp-nav-title">マッサージ事業サービス名</p>
+              <ul class="p-nav__sp-sub-list">
+              <li class="p-nav__sp-item"><a href="/" class="p-nav__sp-link">サービス案内</a></li>
+                <li class="p-nav__sp-item"><a href="/" class="p-nav__sp-link">ご利用案内</a></li>
+                <li class="p-nav__sp-item"><a href="/" class="p-nav__sp-link">会社案内</a></li>
+                <li class="p-nav__sp-item"><a href="/" class="p-nav__sp-link">採用情報</a></li>
+                <li class="p-nav__sp-item"><a href="/" class="p-nav__sp-link">新着情報</a></li>
+                <li class="p-nav__sp-item"><a href="/" class="p-nav__sp-link">お問い合わせ</a></li>
+              </ul>
           </nav><!-- /c-nav -->
         </div>
       </div>

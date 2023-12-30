@@ -28,18 +28,48 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+document.addEventListener('scroll', function() {
+  const fvElement = document.querySelector('.p-fv');
+  const header = document.querySelector('.p-header__wrapper');
+  const logoSvgElements = document.querySelectorAll('.p-header__home-link svg *');
+  const navElements = document.querySelectorAll('.p-nav a');
+  const snsElements = document.querySelectorAll('.p-nav svg *');
+  const hamburgerLines = document.querySelectorAll('.p-header__hamburger--line'); // ハンバーガーメニューのライン
 
+  if (!fvElement || !header || !logoSvgElements) return;
 
+  const fvBottom = fvElement.offsetTop + fvElement.offsetHeight;
+  const scrollPosition = window.pageYOffset;
+  const scrollPercentage = Math.min(scrollPosition / fvBottom, 1);
 
-  document.addEventListener('scroll', function() {
-    var scrollPosition = window.pageYOffset;
-    var maxScroll = document.body.scrollHeight - window.innerHeight;
-    var scrollPercentage = scrollPosition / maxScroll;
+  const colorValue = Math.floor(255 - (204 * scrollPercentage));
+  const opacity = Math.min(scrollPercentage, 1);
 
-    // SVG内の全ての要素の色を変更
-    var svgElements = document.querySelectorAll('svg *');
-    svgElements.forEach(function(element) {
-      element.style.fill = `rgba(${Math.floor(255 * scrollPercentage)}, ${Math.floor(255 * (1 - scrollPercentage))}, 0)`;
-    });
+  navElements.forEach(function(element) {
+    element.style.color = `rgb(${colorValue}, ${colorValue}, ${colorValue})`;
   });
 
+  snsElements.forEach(function(element) {
+    element.style.fill = `rgb(${colorValue}, ${colorValue}, ${colorValue})`;
+  });
+
+  hamburgerLines.forEach(function(line) {
+    line.style.backgroundColor = `rgb(${colorValue}, ${colorValue}, ${colorValue})`;
+  });
+
+  header.style.backgroundColor = `rgba(255, 255, 255, ${opacity})`;
+
+  if (scrollPercentage > 0.5) {
+    const adjustedPercentage = (scrollPercentage - 0.5) * 2;
+    const red = Math.floor(0 * adjustedPercentage);
+    const green = Math.floor(194 * adjustedPercentage);
+    const blue = Math.floor(232 * adjustedPercentage);
+    logoSvgElements.forEach(function(element) {
+      element.style.fill = `rgb(${red}, ${green}, ${blue})`;
+    });
+  } else {
+    logoSvgElements.forEach(function(element) {
+      element.style.fill = 'rgb(255, 255, 255)';
+    });
+  }
+});
