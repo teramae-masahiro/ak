@@ -21,9 +21,8 @@ c-footer
     }
   }
   &__logo  {
-    @include sp {
-      width: 270px;
-    }
+    width: 270px;
+
   }
   &__title {
     font-size: 17px;
